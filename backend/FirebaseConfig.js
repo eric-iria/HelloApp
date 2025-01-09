@@ -31,4 +31,5 @@ const auth = initializeAuth(app, {
 
 
 const banco = getFirestore(app);
-export {app, auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, banco};
+export {app, auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, 
+  banco};
