@@ -9,11 +9,13 @@ import AuthContext from '../util/Contexto';
 import { auth } from '../backend/FirebaseConfig';
 import { onAuthStateChanged } from 'firebase/auth';
 
-const CriarTarefa = () => {
+const CriarTarefa = (navegacao, route) => {
     const[nome, setNome] = useState('');
     const[descricao, setDescricao] = useState('');
     
     const [userId, setUserId] = useState(null);
+
+    const [idTarefa] = route.params.tarefaId
     
     useEffect(() => {
         const usuario = onAuthStateChanged(auth, user => {
